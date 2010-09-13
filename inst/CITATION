@@ -1,0 +1,16 @@
+citHeader("To cite package 'weirs' in publications use:")
+
+desc <- packageDescription("weirs") 
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", desc$Date) 
+vers <- paste("R package version", desc$Version) 
+
+citEntry(entry="Manual", 
+         title = "weirs---A hydraulics package to compute open-channel flow over weirs", 
+         author = personList(as.person("W.H. Asquith")), 
+         year = year, 
+         note = vers,
+         textVersion =
+         paste("Asquith, W.H., ", year, 
+               ", weirs---A hydraulics package to compute open-channel flow over weirs. ",
+               vers, ", Lubbock, Texas.",
+               sep=""))
