@@ -28,7 +28,7 @@ with(fig3.0.90, plot(h.over.P, kc, type="l",
 					xlim=c(0,2.8), ylim=c(0.70,1.00)))
 with(fig3.0.20, lines(h.over.P, kc))
 with(fig3.0.40, lines(h.over.P, kc))
-with(fig3.0.60, lines(h.over.P, kc))	
+with(fig3.0.60, lines(h.over.P, kc))
 with(fig3.0.70, lines(h.over.P, kc))
 with(fig3.0.80, lines(h.over.P, kc))
 mtext("Definition fo adjustment factor, Kc, for contracted sharp-crested weirs")
@@ -97,8 +97,6 @@ tmp <- lowess(fig7.2t1$C~fig7.2t1$h.over.L, f=1/10); lines(tmp$x, tmp$y, col=2)
 tmp <- lowess(fig7.vert$C~fig7.vert$h.over.L, f=1/10); lines(tmp$x, tmp$y, col=2)
 
 
-dev.off()
-
 weir.nomographs <- new.env(hash=TRUE)
 assign("fig2",new.env(hash=TRUE), envir=weir.nomographs)
 assign("fig3",new.env(hash=TRUE), envir=weir.nomographs)
@@ -109,9 +107,9 @@ assign("fig7",new.env(hash=TRUE), envir=weir.nomographs)
 
 tmp <- get("fig2", envir=weir.nomographs)
 assign("0.0000", fig2.vert, envir=tmp)
-assign(as.character(round(1/3, digits=4)), fig2.1t3, envir=tmp)
-assign(as.character(round(2/3, digits=4)), fig2.2t3, envir=tmp)
-assign(as.character(round(3/3, digits=4)), fig2.3t3, envir=tmp)
+assign(as.character(sprintf("%.4f",1/3)), fig2.1t3, envir=tmp)
+assign(as.character(sprintf("%.4f",2/3)), fig2.2t3, envir=tmp)
+assign(as.character(sprintf("%.4f",3/3)), fig2.3t3, envir=tmp)
 
 
 
@@ -158,7 +156,7 @@ Y <- c(1, 1.01, 1.03, 1.04, 1.05, 1.06, 1.08, 1.09);
 tmp <- data.frame(R.over.h=X, kr=Y);
 assign("broadcrest.roundingtable", tmp, envir=weir.nomographs)
 
-                  
+
 assign("broadcrest.downstreamtable", new.env(hash=TRUE), envir=weir.nomographs)
 tmp <- get("broadcrest.downstreamtable", envir=weir.nomographs)
 assign("h.over.L", c(0.1, 0.4, 1.0, 2.0), envir=tmp);
@@ -275,5 +273,24 @@ assign("H", fig23.paved$H, envir=tmp);
 assign("C", fig23.paved$C, envir=tmp);
 
 
+############################################# END TWRI
+
+############################################# BEGIN BOS
+
+Bos1989C  <- read.table("Bos1989C.dat",  header=TRUE)
+Bos1989Cv <- read.table("Bos1989Cv.dat", header=TRUE)
+with(Bos1989C, plot(h.over.L, C, type="l"))
+mtext("Bos(1989) C")
+with(Bos1989Cv, plot(CAstar.over.A, Cv, type="l"))
+mtext("Bos(1989) CAstar.over.A")
+assign("Bos1989C",  Bos1989C,  envir=weir.nomographs)
+assign("Bos1989Cv", Bos1989Cv, envir=weir.nomographs)
+
+
+
+dev.off()
+
 .weir.nomographs <- weir.nomographs;
-save(.weir.nomographs, file="TWRI3A5nomographs.RData");
+save(.weir.nomographs, file="WEIRSnomographs.RData");
+
+

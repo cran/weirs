@@ -3,5 +3,14 @@ ChangeLog for R Package weirs by W.H. Asquith
 ----------------------------------------------------------
 
 Version 0.10---September 13, 2010 Initial Release
-   Only broad-crested weir flow for TWRI3A5 is provided 
-for initial evaluation by research colleagues.
+   Only broad-crested weir flow from TWRI3A5 is provided 
+   for initial evaluation by research colleagues.
+
+Version 0.15---September 30, 2010 Bos Release (not public)
+   Addition of the Bos (1989) solutions for broad-
+   created weir flow.
+
+Version 0.20---October 5, 2010 Sharp-Crested Release
+   Addition of sharp-crested weir flow from TWRI3A5 is
+   provided for initial evaluation by research colleagues.
+
