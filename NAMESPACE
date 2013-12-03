@@ -1,8 +1,8 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
-
-# Export all names
-exportPattern(".")
+export(weir3a5.sharpcrest)
+export(weir3a5.broadcrest)
+export(weirbos.broadcrest)
+export(weir.broadcrest)
+export(weir.sharpcrest)
 
 # Import all packages listed as Imports or Depends
 import(

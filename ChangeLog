@@ -14,3 +14,6 @@ Version 0.20---October 5, 2010 Sharp-Crested Release
    Addition of sharp-crested weir flow from TWRI3A5 is
    provided for initial evaluation by research colleagues.
 
+Version 0.22--June 14, 2011 Changed my name slightly in 
+   DESCRIPTION so that all my packages on the CRAN list
+   by author together.
