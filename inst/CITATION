@@ -1,8 +1,7 @@
 citHeader("To cite package 'weirs' in publications use:")
 
-desc <- packageDescription("weirs") 
-year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", desc$Date) 
-vers <- paste("R package version", desc$Version) 
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date) 
+vers <- paste("R package version",           meta$Version) 
 
 citEntry(entry="Manual", 
          title = "weirs---A hydraulics package to compute open-channel flow over weirs", 
