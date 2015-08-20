@@ -17,3 +17,9 @@ Version 0.20---October 5, 2010 Sharp-Crested Release
 Version 0.22--June 14, 2011 Changed my name slightly in 
    DESCRIPTION so that all my packages on the CRAN list
    by author together.
+
+Version 0.24--April 20, 2015
+   CRAN policy accommodation.
+
+Version 0.25--August 20, 2015
+   Modified NAMESPACE for CRAN policy changes.

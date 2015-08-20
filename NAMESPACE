@@ -8,3 +8,5 @@ export(weir.sharpcrest)
 import(
   utils
 )
+
+importFrom("stats", "approx")
